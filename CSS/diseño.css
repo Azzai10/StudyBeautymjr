@@ -1,0 +1,480 @@
+/* === RESET GENERAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === CUERPO DE LA PÁGINA === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffe6f0; /* rosa muy suave */
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* === ENCABEZADO Y LOGO === */
+.header-container {
+  background-color: #fdf1f8; /* rosa claro */
+  border-bottom: 3px solid #e4a4d4; /* rosa medio */
+  padding: 10px 0;
+}
+
+.logo {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.title-img {
+  max-width: 90%;
+  max-height: 120px;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+/* === MENÚ DE NAVEGACIÓN === */
+nav {
+  background-color: #ffb3d9; /* rosa vibrante */
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 2px solid #d94b94; /* rosa oscuro */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s ease, border-radius 0.3s;
+}
+
+nav a:hover {
+  background-color: #e68ab8; /* rosa oscuro al hover */
+  border-radius: 10px;
+}
+
+/* === SECCIÓN DESTACADA === */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #b3005f; /* rosa oscuro fuerte */
+  margin: 40px 0 20px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #b3005f;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* === TARJETAS DE SERVICIOS === */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 0 20px 40px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #b3005f;
+  margin: 15px 0 5px;
+  text-align: center;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #555;
+}
+
+/* === BOTÓN VOLVER ATRÁS === */
+.btn-volver {
+  background-color: #d63384;
+  color: #fff;
+  padding: 12px 30px;
+  margin: 40px auto;
+  display: block;
+  text-align: center;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(214, 51, 132, 0.3);
+}
+
+.btn-volver:hover {
+  background-color: #b3005f;
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffccdf; /* rosa pastel */
+  color: #660033; /* rosa oscuro */
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-top: 2px solid #e68ab8;
+}
+
+footer i {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: #b3005f;
+  transition: transform 0.3s;
+}
+
+footer i:hover {
+  transform: scale(1.2);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .title-img {
+    max-width: 100%;
+    max-height: 100px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* === ESTILOS BOTÓN VOLVER ATRÁS PEQUEÑO === */
+.btn.btn-secondary {
+  background-color: #f59ac2; /* rosa suave */
+  color: white;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-secondary:hover {
+  background-color: #d86ba9; /* rosa medio */
+}
+
+/* === WHATSAPP FLOTANTE === */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f59ac2;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #d86ba9;
+  transform: scale(1.1);
+}
+
+.whatsapp-float i {
+  font-size: 1.4rem;
+}
+
+/* === FORMULARIO === */
+form {
+  max-width: 650px;
+  margin: 50px auto;
+  background: linear-gradient(to bottom right, #ffeef4, #fff5fa);
+  padding: 40px 35px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(255, 102, 153, 0.2);
+  position: relative;
+  border: 2px solid #f8c4d6;
+}
+
+form::before {
+  content: "💅 Rellena tu experiencia";
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  background-color: #f58fb0;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin: 18px 0 6px;
+  color: #8e0038;
+  font-size: 1.05rem;
+}
+
+form input[type="text"],
+form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border: 2px solid #f8c4d6;
+  border-radius: 18px;
+  font-size: 1rem;
+  background-color: #fffafa;
+  transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form select:focus {
+  border-color: #f58fb0;
+  outline: none;
+  box-shadow: 0 0 10px rgba(245, 143, 176, 0.3);
+}
+
+form input[type="submit"] {
+  background-color: #f58fb0;
+  color: white;
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0;
+  box-shadow: 0 6px 20px rgba(245, 143, 176, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #c8467b;
+  transform: scale(1.04);
+}
+
+/* === TÍTULO PEQUEÑO === */
+.titulo-peque {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem !important;
+}
+
+/* === TABLA PEQUEÑA === */
+.tabla-bonita-peque {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+}
+
+.table-header-peque th {
+  background: linear-gradient(90deg, #eeb5f6, #b96fcb);
+  color: white;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(185, 111, 203, 0.3);
+  user-select: none;
+  text-align: center;
+}
+
+.tabla-row-peque {
+  background: #fff0fc;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(185, 111, 203, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tabla-row-peque:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 12px rgba(185, 111, 203, 0.3);
+}
+
+/* === BOTONES VER === */
+.btn-ver, .btn-ver-peque {
+  background: linear-gradient(135deg, #b96fcb, #eeb5f6);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(185, 111, 203, 0.45);
+  transition: background 0.5s ease, transform 0.3s ease;
+  text-decoration: none;
+  padding: 10px 25px;
+  display: inline-block;
+}
+
+.btn-ver:hover, .btn-ver-peque:hover {
+  background: linear-gradient(135deg, #eeb5f6, #b96fcb);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(185, 111, 203, 0.6);
+  text-decoration: none;
+}
+
+/* === HORARIOS === */
+.hours-section {
+  background-color: #f9e6f7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(192, 58, 203, 0.15);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hours-title {
+  color: #c03acb;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.hours-container {
+  overflow-x: auto;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hours-table thead tr th {
+  background-color: #c03acb;
+  color: white;
+  padding: 12px 15px;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+}
+
+.hours-table tbody tr {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(192, 58, 203, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.hours-table tbody tr:hover {
+  background-color: #f1c9f3;
+}
+
+.hours-table tbody tr td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4b004b;
+}
+
+.hours-table tbody tr td.closed {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.note {
+  margin-top: 12px;
+  font-style: italic;
+  color: #6a317a;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Contenedor para texto + mapa */
+.map-section {
+  text-align: center;
+  margin: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #8e0038;
+}
+
+/* Estilo para el texto de ubicación */
+.map-section h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: #b3005f; /* rosa fuerte */
+}
+
+/* Contenedor del iframe para centrar y darle estilo */
+.map-container {
+  max-width: 600px;
+  margin: 0 auto; /* centra horizontalmente */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(179, 0, 95, 0.3);
+  border: 3px solid #e4a4d4; /* rosa medio */
+}
+
+/* Estilo del iframe para que sea responsive y con altura fija */
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  display: block;
+  border-radius: 20px;
+}
+
