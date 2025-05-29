@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightbox | Bootstrap</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/diseño.css">
+  <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+  <header class="header-container text-center p-3">
+    <img src="img/logoPro.png" alt="Logo" class="logo img-fluid" style="max-width: 200px;">
+    <img src="img/Beauty.png" alt="Centro de Belleza" class="title-img img-fluid" style="max-width: 100%; height: auto;">
+  </header>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f8d0ea;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Menú</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContenido">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="cabelloDropdown" role="button" data-bs-toggle="dropdown">Cabello</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="peinados.html">Peinados</a></li>
+               <li><a class="dropdown-item" href="cortes.html">Cortes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="bellezaDropdown" role="button" data-bs-toggle="dropdown">Belleza</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="colorimetria.html">Colorimetría</a></li>
+              <li><a class="dropdown-item" href="uñas.html">Uñas</a></li>
+              <li><a class="dropdown-item" href="pestanas.html">Pestañas y cejas</a></li>
+              <li><a class="dropdown-item" href="depilacion.html">Depilación</a></li>
+            </ul>
+          </li>
+         <li class="nav-item"><a class="nav-link" href="imagenes.html">Galería</a></li>
+         <li class="nav-item"><a class="nav-link" href="horario.html">Horario</a></li>
+          <li class="nav-item"><a class="nav-link" href="Ubicacion.html">Ubicación</a></li>
+          <li class="nav-item"><a class="nav-link" href="Formulario.html">Formulario</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <main class="container my-4 hours-section">
+    <h1 class="hours-title">Horarios de Atención</h1>
+    <div class="hours-container">
+      <table class="hours-table">
+        <thead>
+          <tr><th>Día</th><th>Horario</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lunes</td><td>9:00am - 6:00pm</td></tr>
+          <tr><td>Martes</td><td>9:00am - 6:00pm</td></tr>
+          <tr><td>Miércoles</td><td>9:00am - 6:00pm</td></tr>
+          <tr><td>Jueves</td><td>9:00am - 6:00pm</td></tr>
+          <tr><td>Viernes</td><td>9:00am - 6:00pm</td></tr>
+          <tr><td>Sabado</td><td>9:00am - 3:00pm</td></tr>
+          <tr><td>Domingo</td><td class="closed">CERRADO</td></tr>
+        </tbody>
+      </table>
+      <p class="note">Nota: No abrimos en días festivos.</p>
+    </div>
+  </main>
+
+
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/529515055974" class="whatsapp-float" target="_blank" title="Contáctanos por WhatsApp">
+    <i class="bi bi-whatsapp fs-2"></i>
+  </a>
+
+
+  <footer class="text-center mt-5 mb-3">
+    <h5>SÍGUENOS EN NUESTRAS REDES SOCIALES</h5>
+    <a href="https://www.facebook.com/share/1A16gnLAWG/" target="_blank">
+      <img src="img/facebook.png" width="25" height="25" title="Facebook">
+    </a>
+    <a href="https://wa.me/529515055974" target="_blank">
+      <img src="img/wa.png" style="height: 25px;">
+    </a>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
